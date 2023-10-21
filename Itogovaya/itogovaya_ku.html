@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Практическая работа №1</title>
+	<script>
+		let info = {
+			"surname":"Михеева", 
+			"name":"Татьяна", 
+			"patronymic":"Александровна", 
+			"ocupation":"Преподаватель специальных дисциплин", 
+			"degree":"Высшее", 
+			"education":"Московский государственный институт электронной техники (технический университет)", 
+			"qualification":"Инженер-программист инфокоммуникационных систем", 
+			"speciality":"Программное обеспечение радиоэлектронных систем", 
+			"discipline":["Основы алгоритмизации и программирования", "Компьютерная графика"], 
+			"category":"Первая", 
+			"exp":"13", 
+			"email":"pechora-proger@mail.ru", 
+			"site":"pechora-proger.ru"
+		};
+		let line = `
+			<p style="font-size: 45px; margin-bottom: 10px;">${info.surname} ${info.name} ${info.patronymic}</p>
+			<h2 style="margin-top: 0px;">${info.ocupation}</h2>
+			<hr>
+				<h4>Основная информация:</h4>
+				<ul>
+					<li><p>Уровень образования: ${info.degree}</p></li>
+					<li><p>Образование: ${info.education}</p></li>
+					<li><p>Квалификация: ${info.qualification}</p></li>
+					<li><p>Специализация: ${info.speciality}</p></li>
+				    <li><p>Преподаваемые дисциплины: </p>
+						<ul type:"circle">
+							<li>${info.discipline[0]}</li>
+							<li>${info.discipline[1]}</li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Дополнительная информация:</h4>
+				<ul>
+					<li><p>Категория: ${info.category}</p></li>
+					<li><p>Стаж: ${info.exp}</p></li>
+					<li><p>E-mail: ${info.email}</p></li>
+					<li><p>Персональный сайт: ${info.site}</p></li>
+				</ul>
+				
+		`
+		clone.PNG
+	</script>
+</head>
+<body>
+	<style type="text/css">
+		body {
+			font-family: 'Playfair Display SC', serif;
+			padding: 0;
+			margin: 0;
+			background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+		}
+
+		div{
+			margin-top: 50px;
+			display: flex;
+		    font-size: 19px;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			margin-left: 30px;
+		}
+
+		.glavzag{
+			font-size: 40px;
+		}
+
+		nav {
+		  	display: flex;
+		  	flex-direction: row;
+		  	justify-content: center;
+		  	flex-wrap: wrap;
+		  	background-color: black;
+		  	padding: 20px 10px;
+		}
+
+		nav a {
+		  	color: white;
+		  	padding: 0px 50px;
+		  	text-decoration: none;
+		  	font-size: 18px; 
+		  	border-radius: 4px;
+		}
+
+		p, ul, li, h2 {
+			margin: 0px;
+		}
+
+		hr {
+			margin: 20px 0;
+			padding: 0;
+			height: 0;
+			border: none;
+			border-top: 1px solid #333;
+		}
+
+		img{
+			width: 400px;
+		}
+
+	</style>
+
+	<nav>
+		<a>О проекте</a>
+		<a>Курсы</a>
+		<a>Преподаватели</a>
+		<a>Контакты</a>
+	</nav>
+	<div>
+		<img src='no-image.jpg'>
+		<section class="info">
+			<script type="text/javascript">
+				document.write(line);
+			</script>
+		</section>
+	</div>
+</body>
+</html>
